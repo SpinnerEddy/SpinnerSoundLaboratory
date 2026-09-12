@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Spinner Sound Laboratory</title>
+        <style>
+            html,
+            body {
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                background: #111;
+                color: #ddd;
+                font-family: monospace;
+                overflow: hidden;
+            }
+
+            /* BaseApplication が #webgl-canvas を要求するため、描画しなくても要素だけ必要 */
+            #webgl-canvas {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+            #hint {
+                position: fixed;
+                top: 16px;
+                left: 16px;
+                font-size: 13px;
+                line-height: 1.8;
+                opacity: 0.6;
+                pointer-events: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <canvas id="webgl-canvas"></canvas>
+        <div id="hint">
+            Spinner Sound Laboratory<br />
+            右上の Audio フォルダから Play / Stop / SaveWav
+        </div>
+        <script type="module" src="./src/main.ts"></script>
+    </body>
+</html>
